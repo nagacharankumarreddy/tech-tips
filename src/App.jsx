@@ -33,7 +33,7 @@ const App = () => {
       {isFirst && <About />}
       {!isFirst && count > -1 && <Tip {...current} />}
       {count > -1 ? (
-        <div className="col-md-12 text-center mt-3 fixed_button">
+        <div className=" text-center  fixed_button">
           <button className="btn btn-primary" onClick={del}>
             Next
           </button>
