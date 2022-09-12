@@ -4,7 +4,7 @@ export const alltips = [
     id:   ,
     title:"",
     description:"",
-    link:""
+    link:["",""]
 
    },
    */
@@ -40,6 +40,84 @@ export const alltips = [
     id: 4,
     title: "Instagram",
     description:
-      "If you want to download any reel from instagram ,click on add it to story and resize it. Now click download button on top right ",
+      "If you want to download any reel from instagram ,click on add it to story and resize it. Now click download button on top right .Thats it...",
+    link: ["instagram", "https://www.instagram.com/"],
+  },
+  {
+    id: 5,
+    title: "AI writer",
+    description:
+      "Rytr is an AI writing assistant that helps you create high-quality content, in just a few seconds, at a fraction of the cost! . One of the best free AI tool i have ever seen",
+    link: ["rytr", "https://rytr.me/"],
+  },
+  {
+    id: 6,
+    title: "Online Video editor tools",
+    description:
+      "Edit, Convert, Create. Video Tools. Video Editor · Trim Video · Merge Videos · Add Audio to Video · Add Image to Video. Remove Logo",
+    link: ["123apps", "https://123apps.com/"],
+  },
+  {
+    id: 7,
+    title: "Free Movies and Shows",
+    description:
+      "OSee is a platform where you can watch your favorite shows and movies for free of cost.You can all netflix shows also.",
+    link: ["osee", "https://osee.in/"],
+  },
+  {
+    id: 8,
+    title: "Free Download",
+    description:
+      "Discover Everything!, Search the web for files, videos, audios, eBooks and much more.You can easily download any thing for free.",
+    link: ["filepursuit", "https://filepursuit.com/"],
+  },
+  {
+    id: 9,
+    title: "Alternateive Softwares",
+    description:
+      "AlternativeTo lets you find apps and software for Windows, Mac, Linux, iPhone, iPad, Android, Android Tablets, Web Apps, Online, Windows Tablets and more ",
+    link: ["alternativeto", "https://alternativeto.net/"],
+  },
+  {
+    id: 10,
+    title: "YouCode",
+    description:
+      "YouCode is an ad-free, private, specialized search engine for the developer community to seamlessly search time-saving apps like GitHub, StackOverflow,etc... You can  code snippets directly",
+    link: ["YouCode", "https://you.com/code"],
+  },
+  {
+    id: 11,
+    title: "Get all your data From Google",
+    description:
+      "Google Takeout is a data retrieval platform that allows users to import and export data from a number of Google products. You can download a copy of your data stored within Google products.",
+    link: ["TakeOut", "https://takeout.google.com/"],
+  },
+  {
+    id: 12,
+    title: "Search and get anything easily",
+    description:
+      " Google index search. Video. Video; Audio; Ebook; Pictures; Software/Games. Compressed. Search.",
+    link: ["lumpysoft", "https://lumpysoft.com/"],
+  },
+  {
+    id: 13,
+    title: "Download Youtube video",
+    description:
+      "Now I will show you two easy methods. 1st method is -add pp in url after youtube and hit enter and 2nd method is add ss in url after youtube and hit enter ",
+    link: ["Youtube", "https://www.youtube.com/"],
+  },
+  {
+    id: 14,
+    title: "Remove objects from images",
+    description:
+      "Remove unwanted objects from photos, people, text, and defects from any picture for free. It's extremely easy in just a few clicks",
+    link: ["cleanup.pictures", "https://cleanup.pictures/"],
+  },
+  {
+    id: 15,
+    title: "",
+    description:
+      "Download free softwares, Digital Assets, Video Templates, Plugins, Free Video Backgrounds, Free Sound Effects, Free Video Effects for Filmora, Premiere Pro and etc...",
+    link: ["ask4pc", "https://ask4pc.net/"],
   },
 ];

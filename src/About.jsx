@@ -1,10 +1,11 @@
+import "./about.css";
 export const About = () => {
   return (
-    <h1 className="text-center mb-5">
-      <div className="d-3  text-primary mb-2">Welcome</div>
-      <div className="d-3 text-secondary">
-        Click on below button to get Tech tips
-      </div>
-    </h1>
+    <div className="about">
+      <h1 className="text-center mb-5 ">
+        <div className="d-3  text-info mb-5 ">Welcome</div>
+        <div className=" d-3 text-secondary fa  fa-spin p-5">Get Tech Tips</div>
+      </h1>
+    </div>
   );
 };
