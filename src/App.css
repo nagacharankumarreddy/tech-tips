@@ -9,23 +9,36 @@ body {
     height: 100%;
     background-image: url(./images/bg3.jpg);
     background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat
+    background-size: cover;
+    background-repeat: no-repeat
 
         
 }
 .fixed_button {
             margin: 0;
-                position: absolute;
-                top: 80%;
-                left: 50%;
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
+@media only screen and (min-width: 300px) {
+body {
+        background-image: url(./images/bg4.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    body {
+            background-image: url(./images/bg3.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -35,6 +48,12 @@ body {
             width: 60% !important;
             
         }
+        body{
+            background-image: url(./images/bg3.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat
+        }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -43,4 +62,10 @@ body {
             margin: auto;
             width: 60% !important;
         }
+                  body {
+                      background-image: url(./images/bg3.jpg);
+                      background-position: center;
+                      background-size: cover;
+                      background-repeat: no-repeat
+                  }
 }

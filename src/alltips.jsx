@@ -136,44 +136,49 @@ export const alltips = [
   },
   {
     id: 18,
-    title: "",
-    description: "",
-    link: ["", ""],
+    title: "Image edit",
+    description: "Remove unwanted things from images in seconds",
+    link: ["magiceraser", "https://www.magiceraser.io/"],
   },
   {
     id: 19,
-    title: "",
-    description: "",
-    link: ["", ""],
+    title: "Image Enlarger & Enhancer",
+    description:
+      "All-in-one AI toolkits help you enhance and upscale images. Increases image resolution without losing quality.",
+    link: ["imglarger", "https://imglarger.com/"],
   },
   {
     id: 20,
-    title: "",
-    description: "",
-    link: ["", ""],
+    title: "Free Online Video, Audio, Image Tools",
+    description:
+      "The all-in-one solution helps everyone edit, convert, compress and share media files on the go.Just upload the file, make changes  and download",
+    link: ["media.io", "https://www.media.io/"],
   },
   {
     id: 21,
-    title: "",
-    description: "",
-    link: ["", ""],
+    title: "Free anime movies",
+    description:
+      "Zoro is a Free anime streaming website which you can watch English Subbed and Dubbed Anime online with No Account and Daily update. WATCH NOW!",
+    link: ["", "https://zoro.to/"],
   },
   {
     id: 22,
-    title: "",
-    description: "",
-    link: ["", ""],
+    title: "Free movies and webseries",
+    description:
+      "FlixTor has over thousands movies and tv series online for free. Just find a film or show you enjoy watching and start enjoying it as much as you want! No sign up required – just go there, pick what you like to watch and press play.",
+    link: ["flixtor", "https://flixtor.video/home"],
   },
-  {
-    id: 23,
-    title: "",
-    description: "",
-    link: ["", ""],
-  },
-  {
-    id: 24,
-    title: "",
-    description: "",
-    link: ["", ""],
-  },
+  // {
+  //   id: 23,
+  //   title: "",
+  //   description: "",
+  //   link: ["", ""],
+  // },
+  // {
+  //   id: 24,
+  //   title:"",
+  //   description:"",
+
+  //   link: ["", ""],
+  // },
 ];
