@@ -32,7 +32,7 @@ const App = () => {
       {!isFirst && count > -1 && <Tip {...current} />}
       {count > -1 ? (
         <div className=" text-center  fixed_button">
-          <button className="btn btn-secondary" onClick={del}>
+          <button className="btn btn-secondary btn-lg" onClick={del}>
             Next
           </button>
         </div>

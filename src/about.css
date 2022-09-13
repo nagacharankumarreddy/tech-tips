@@ -1,50 +1,52 @@
-.about{
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(227, 218, 235);
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat
+.about {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(227, 218, 235);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-h1{
-    font-family:  'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+h1 {
+  font-family: "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 300px) {
-    .about {
-            background-image: url(./images/bg2.jpg);
-    
-        }
-        .techtext{
-                margin-top: 50px;
-                    font-size: larger;
-                    font-weight: 900;
-                    color: #d3e2c4;
-                    font-family:  cursive;
-        }
+  .about {
+    background-image: url(./images/bg2.jpg);
+  }
+  .techtext {
+    margin-top: 50px;
+    font-size: larger;
+    font-weight: 900;
+    color: #181a17;
+    font-family: cursive;
+  }
+  .welcome {
+    font-family: cursive;
+    padding-top: 20%;
+    font-size: xxx-large;
+    font-weight: 900;
+    color: #aee0e0;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .about {
-            background-image: url(./images/bg2.jpg);
-    
-        }
+  .about {
+    background-image: url(./images/bg2.jpg);
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .about {
-            background-image: url(./images/bg.jpg);
-            
-        }
-    
+  .about {
+    background-image: url(./images/bg.jpg);
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .about {
-            background-image: url(./images/bg.jpg);
-           
-        }
+  .about {
+    background-image: url(./images/bg.jpg);
+  }
 }
