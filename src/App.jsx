@@ -19,13 +19,11 @@ const App = () => {
   useEffect(() => {
     // let random = Math.floor(Math.random() * (toBe.length - 1));
     setCurrent(toBe[random]);
-    console.log("click", current);
   }, [click]);
   useEffect(() => {
     if (!isFirst) {
       const remaining = toBe.filter((ele) => ele !== current);
       setToBe(remaining);
-      console.log("rem", remaining);
     }
   }, [current]);
   return (
@@ -34,7 +32,7 @@ const App = () => {
       {!isFirst && count > -1 && <Tip {...current} />}
       {count > -1 ? (
         <div className=" text-center  fixed_button">
-          <button className="btn btn-primary" onClick={del}>
+          <button className="btn btn-secondary" onClick={del}>
             Next
           </button>
         </div>

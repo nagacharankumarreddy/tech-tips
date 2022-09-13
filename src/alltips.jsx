@@ -47,7 +47,7 @@ export const alltips = [
     id: 5,
     title: "AI writer",
     description:
-      "Rytr is an AI writing assistant that helps you create high-quality content, in just a few seconds, at a fraction of the cost! . One of the best free AI tool i have ever seen",
+      "Rytr is an AI writing assistant that helps you create high-quality content, in just a few seconds, at a fraction of the cost! . One of the best free AI tool you have ever seen",
     link: ["rytr", "https://rytr.me/"],
   },
   {
@@ -103,7 +103,7 @@ export const alltips = [
     id: 13,
     title: "Download Youtube video",
     description:
-      "Now I will show you two easy methods. 1st method is -add pp in url after youtube and hit enter and 2nd method is add ss in url after youtube and hit enter ",
+      "Now I will show you three easy methods. 1st method is add pp in url after youtube and hit enter and 2nd method is add 3s in url after youtube and hit enter and 3rd is add ss before youtube",
     link: ["Youtube", "https://www.youtube.com/"],
   },
   {
@@ -115,9 +115,65 @@ export const alltips = [
   },
   {
     id: 15,
-    title: "",
+    title: "Free download anything",
     description:
       "Download free softwares, Digital Assets, Video Templates, Plugins, Free Video Backgrounds, Free Sound Effects, Free Video Effects for Filmora, Premiere Pro and etc...",
     link: ["ask4pc", "https://ask4pc.net/"],
+  },
+  {
+    id: 16,
+    title: "Free movies and shows",
+    description:
+      "Tubi is the leading free, premium, on demand video streaming app. We have the largest library of content with over 40,000 movies and television shows",
+    link: ["TubiTV", "https://tubitv.com/"],
+  },
+  {
+    id: 17,
+    title: "Free online Tools",
+    description:
+      " Free Online Tools(95) like article rewriter,paraphrasing tool,grammer checker, image to text, etc...",
+    link: ["prepostseo", "https://www.prepostseo.com/"],
+  },
+  {
+    id: 18,
+    title: "",
+    description: "",
+    link: ["", ""],
+  },
+  {
+    id: 19,
+    title: "",
+    description: "",
+    link: ["", ""],
+  },
+  {
+    id: 20,
+    title: "",
+    description: "",
+    link: ["", ""],
+  },
+  {
+    id: 21,
+    title: "",
+    description: "",
+    link: ["", ""],
+  },
+  {
+    id: 22,
+    title: "",
+    description: "",
+    link: ["", ""],
+  },
+  {
+    id: 23,
+    title: "",
+    description: "",
+    link: ["", ""],
+  },
+  {
+    id: 24,
+    title: "",
+    description: "",
+    link: ["", ""],
   },
 ];
