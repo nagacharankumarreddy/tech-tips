@@ -164,7 +164,7 @@ export const alltips = [
     title: "Free anime movies",
     description:
       "Zoro is a Free anime streaming website which you can watch English Subbed and Dubbed Anime online with No Account and Daily update. WATCH NOW!",
-    link: ["", "https://zoro.to/"],
+    link: ["Zoro", "https://zoro.to/"],
   },
   {
     id: 22,
