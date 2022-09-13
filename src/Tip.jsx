@@ -1,6 +1,12 @@
 import React from "react";
 
-export const Tip = ({ id, title = "", description = "", link = ["", ""] }) => {
+export const Tip = ({
+  id,
+  title = "",
+  description = "",
+  link = ["", ""],
+  list,
+}) => {
   return (
     <div className="container  h-5">
       <h1 className="text-center text-warning">Tech Tips</h1>
@@ -8,6 +14,12 @@ export const Tip = ({ id, title = "", description = "", link = ["", ""] }) => {
         <div className="card-body">
           {title !== "" && <h4 className="card-title">{title}</h4>}
           <p className="card-text">{description}</p>
+          <ol>
+            {list &&
+              list.map((item) => {
+                return <li>{item}</li>;
+              })}
+          </ol>
           {link[0] !== "" && (
             <div className="text-center">
               <a href={link[1]} className="btn btn-secondary ">

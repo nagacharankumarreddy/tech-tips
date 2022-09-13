@@ -103,8 +103,13 @@ export const alltips = [
     id: 13,
     title: "Download Youtube video",
     description:
-      "Now I will show you three easy methods. 1st method is add pp in url after youtube and hit enter and 2nd method is add 3s in url after youtube and hit enter and 3rd is add ss before youtube",
+      "Now I will show you three easy methods.Follow below steps and hit enter",
     link: ["Youtube", "https://www.youtube.com/"],
+    list: [
+      "Add pp in url after youtube",
+      "Add 3s in url after youtube",
+      "Add ss before youtube",
+    ],
   },
   {
     id: 14,
