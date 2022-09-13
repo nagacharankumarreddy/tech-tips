@@ -11,12 +11,16 @@ body {
     background-position: center;
         background-size: cover;
         background-repeat: no-repeat
+
+        
 }
 .fixed_button {
-    position: fixed;
-        bottom: 10px;
-        top:60%;
-        margin-left: 47%;
+            margin: 0;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -29,6 +33,7 @@ body {
     .card {
             margin: auto;
             width: 60% !important;
+            
         }
 }
 
