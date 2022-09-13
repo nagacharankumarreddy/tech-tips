@@ -16,10 +16,11 @@ h1 {
   }
   .techtext {
     margin-top: 50px;
-    font-size: larger;
+    font-size: xxx-large;
     font-weight: 900;
     color: #181a17;
     font-family: cursive;
+    padding-top: 2%;
   }
   .welcome {
     font-family: cursive;
@@ -35,6 +36,20 @@ h1 {
   .about {
     background-image: url(./images/bg2.jpg);
   }
+  .welcome {
+    font-family: cursive;
+    padding-top: 5%;
+    font-size: xxx-large;
+    font-weight: 900;
+    color: #aee0e0;
+  }
+  .techtext {
+    margin-top: 50px;
+    font-size: xxx-large;
+    font-weight: 900;
+    color: #1b0303;
+    font-family: cursive;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -42,11 +57,38 @@ h1 {
   .about {
     background-image: url(./images/bg.jpg);
   }
+  .welcome {
+    font-family: cursive;
+    padding-top: 5%;
+    font-size: xxx-large;
+    font-weight: 900;
+    color: #aee0e0;
+  }
+  .techtext {
+    font-size: larger;
+    font-weight: 900;
+    color: #f6f7f5;
+    font-family: cursive;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .about {
     background-image: url(./images/bg.jpg);
+  }
+  .welcome {
+    font-family: cursive;
+    padding-top: 5%;
+    font-size: xxx-large;
+    font-weight: 900;
+    color: #aee0e0;
+  }
+  .techtext {
+    font-size: larger;
+    font-weight: 900;
+    color: #f6f7f5;
+    font-family: cursive;
+    margin-top: 10px;
   }
 }
