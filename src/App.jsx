@@ -37,9 +37,9 @@ const App = () => {
           </button>
         </div>
       ) : (
-        <div className="col-md-12 text-center mt-3 end">
-          <div className="d-flex  justify-content-center mt-5">
-            <div className=" text-center  my-4">
+        <div className="col-md-12 text-center end">
+          <div className="d-flex  justify-content-center">
+            <div className=" text-center  my-5">
               <marquee behavior="scroll" direction="left">
                 <h1>You have completed all tips</h1>
               </marquee>

@@ -1,71 +1,88 @@
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    background-image: url(./images/bg3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat
-
-        
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/bg3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .fixed_button {
-            margin: 0;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.end {
+  margin-top: 33%;
+  color: bisque;
 }
 
 @media only screen and (min-width: 300px) {
-body {
-        background-image: url(./images/bg4.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat
-    }
+  body {
+    background-image: url(./images/bg4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .end {
+    color: rgb(17 58 133);
+  }
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    body {
-            background-image: url(./images/bg3.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat
-        }
+@media only screen and (min-width: 500px) {
+  body {
+    background-image: url(./images/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .end {
+    color: bisque;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .card {
-            margin: auto;
-            width: 60% !important;
-            
-        }
-        body{
-            background-image: url(./images/bg3.jpg);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat
-        }
+  .card {
+    margin: auto;
+    width: 60% !important;
+  }
+  body {
+    background-image: url(./images/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .end {
+    margin-top: 10%;
+    color: bisque;
+    font-family: cursive;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .card {
-            margin: auto;
-            width: 60% !important;
-        }
-                  body {
-                      background-image: url(./images/bg3.jpg);
-                      background-position: center;
-                      background-size: cover;
-                      background-repeat: no-repeat
-                  }
+  .card {
+    margin: auto;
+    width: 60% !important;
+  }
+  body {
+    background-image: url(./images/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .end {
+    margin-top: 10%;
+    color: bisque;
+  }
 }
