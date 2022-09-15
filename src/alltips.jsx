@@ -1,7 +1,7 @@
-export const alltips = [
+const alltips = [
   /* 
   {
-    id:   ,
+    id: 1  ,
     title:"",
     description:"",
     link:["",""]
@@ -187,3 +187,5 @@ export const alltips = [
   //   link: ["", ""],
   // },
 ];
+alltips.sort(() => Math.random() - 0.5);
+export default alltips;

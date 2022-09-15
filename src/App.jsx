@@ -1,38 +1,43 @@
 import { useState, useEffect } from "react";
-import { alltips } from "./alltips";
+import alltips from "./alltips";
 import { About } from "./About";
 import "./App.css";
 import { Tip } from "./Tip";
 
 const App = () => {
   const [toBe, setToBe] = useState(alltips); //[{},{}]
-  const [current, setCurrent] = useState(null);
+  let randomList = toBe;
+  console.table(randomList);
   const [isFirst, setIsFirst] = useState(true);
-  const [click, changeClick] = useState(true);
-  const [count, setCount] = useState(alltips.length);
-  var random = Math.floor(Math.random() * (toBe.length - 1));
-  const del = () => {
-    changeClick(!click);
+  const [currentIndex, setCurrentIndex] = useState(-1);
+  const [currentTip, setCurrentTip] = useState(null);
+  const prev = () => {
     setIsFirst(false);
-    setCount(count - 1);
+    setCurrentIndex(currentIndex - 1);
+    console.log("prev", currentIndex);
+  };
+  const next = () => {
+    if (isFirst) setCurrentIndex(0);
+    setIsFirst(false);
+    setCurrentIndex(currentIndex + 1);
+    console.log("next", currentIndex);
   };
   useEffect(() => {
-    // let random = Math.floor(Math.random() * (toBe.length - 1));
-    setCurrent(toBe[random]);
-  }, [click]);
-  useEffect(() => {
-    if (!isFirst) {
-      const remaining = toBe.filter((ele) => ele !== current);
-      setToBe(remaining);
-    }
-  }, [current]);
+    setCurrentTip(randomList[currentIndex]);
+  }, [currentIndex]);
+  console.log(currentIndex, alltips.length);
   return (
     <div>
       {isFirst && <About />}
-      {!isFirst && count > -1 && <Tip {...current} />}
-      {count > -1 ? (
+      {!isFirst && currentIndex < alltips.length && <Tip {...currentTip} />}
+      {currentIndex < alltips.length ? (
         <div className=" text-center  fixed_button">
-          <button className="btn btn-secondary btn-lg" onClick={del}>
+          {currentIndex > 0 && (
+            <button className="btn btn-secondary btn-lg" onClick={prev}>
+              Previous
+            </button>
+          )}
+          <button className="btn btn-secondary btn-lg" onClick={next}>
             Next
           </button>
         </div>
