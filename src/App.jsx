@@ -7,25 +7,21 @@ import { Tip } from "./Tip";
 const App = () => {
   const [toBe, setToBe] = useState(alltips); //[{},{}]
   let randomList = toBe;
-  console.table(randomList);
   const [isFirst, setIsFirst] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [currentTip, setCurrentTip] = useState(null);
   const prev = () => {
     setIsFirst(false);
     setCurrentIndex(currentIndex - 1);
-    console.log("prev", currentIndex);
   };
   const next = () => {
     if (isFirst) setCurrentIndex(0);
     setIsFirst(false);
     setCurrentIndex(currentIndex + 1);
-    console.log("next", currentIndex);
   };
   useEffect(() => {
     setCurrentTip(randomList[currentIndex]);
   }, [currentIndex]);
-  console.log(currentIndex, alltips.length);
   return (
     <div>
       {isFirst && <About />}
