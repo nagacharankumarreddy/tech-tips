@@ -31,24 +31,24 @@ const alltips = [
   },
   {
     id: 3,
-    title: "Security",
+    title: "Free movies and webseries",
     description:
-      "URLVoid is used by cyber security companies and IT researchers to speed-up the process of cyber threat analysis, you can better identify potentially malicious websites that have been classified as a threat by multiple trusted sources.",
-    link: ["urlvoid", "https://www.urlvoid.com/"],
+      "FlixTor has over thousands movies and tv series online for free. Just find a film or show you enjoy watching and start enjoying it as much as you want! No sign up required – just go there, pick what you like to watch and press play.",
+    link: ["Flixtor", "https://flixtor.video/home"],
   },
   {
     id: 4,
     title: "Instagram",
     description:
       "If you want to download any reel from instagram ,click on add it to story and resize it. Now click download button on top right .Thats it...",
-    link: ["instagram", "https://www.instagram.com/"],
+    link: ["Instagram", "https://www.instagram.com/"],
   },
   {
     id: 5,
     title: "AI writer",
     description:
       "Rytr is an AI writing assistant that helps you create high-quality content, in just a few seconds, at a fraction of the cost! . One of the best free AI tool you have ever seen",
-    link: ["rytr", "https://rytr.me/"],
+    link: ["Rytr", "https://rytr.me/"],
   },
   {
     id: 6,
@@ -62,21 +62,21 @@ const alltips = [
     title: "Free Movies and Shows",
     description:
       "OSee is a platform where you can watch your favorite shows and movies for free of cost.You can all netflix shows also.",
-    link: ["osee", "https://osee.in/"],
+    link: ["oSee", "https://osee.in/"],
   },
   {
     id: 8,
     title: "Free Download",
     description:
       "Discover Everything!, Search the web for files, videos, audios, eBooks and much more.You can easily download any thing for free.",
-    link: ["filepursuit", "https://filepursuit.com/"],
+    link: ["FilePursuit", "https://filepursuit.com/"],
   },
   {
     id: 9,
     title: "Alternateive Softwares",
     description:
       "AlternativeTo lets you find apps and software for Windows, Mac, Linux, iPhone, iPad, Android, Android Tablets, Web Apps, Online, Windows Tablets and more ",
-    link: ["alternativeto", "https://alternativeto.net/"],
+    link: ["Alternativeto", "https://alternativeto.net/"],
   },
   {
     id: 10,
@@ -97,13 +97,13 @@ const alltips = [
     title: "Search and get anything easily",
     description:
       " Google index search. Video. Video; Audio; Ebook; Pictures; Software/Games. Compressed. Search.",
-    link: ["lumpysoft", "https://lumpysoft.com/"],
+    link: ["Lumpysoft", "https://lumpysoft.com/"],
   },
   {
     id: 13,
     title: "Download Youtube video",
     description:
-      "Now I will show you three easy methods.Follow below steps and hit enter",
+      "Now I will show you three easy methods.Follow below steps and hit Enter",
     link: ["Youtube", "https://www.youtube.com/"],
     list: [
       "Add pp in url after youtube",
@@ -116,14 +116,14 @@ const alltips = [
     title: "Remove objects from images",
     description:
       "Remove unwanted objects from photos, people, text, and defects from any picture for free. It's extremely easy in just a few clicks",
-    link: ["cleanup.pictures", "https://cleanup.pictures/"],
+    link: ["Cleanup.pictures", "https://cleanup.pictures/"],
   },
   {
     id: 15,
     title: "Free download anything",
     description:
       "Download free softwares, Digital Assets, Video Templates, Plugins, Free Video Backgrounds, Free Sound Effects, Free Video Effects for Filmora, Premiere Pro and etc...",
-    link: ["ask4pc", "https://ask4pc.net/"],
+    link: ["Ask4pc", "https://ask4pc.net/"],
   },
   {
     id: 16,
@@ -137,27 +137,27 @@ const alltips = [
     title: "Free online Tools",
     description:
       " Free Online Tools(95) like article rewriter,paraphrasing tool,grammer checker, image to text, etc...",
-    link: ["prepostseo", "https://www.prepostseo.com/"],
+    link: ["Prepostseo", "https://www.prepostseo.com/"],
   },
   {
     id: 18,
     title: "Image edit",
     description: "Remove unwanted things from images in seconds",
-    link: ["magiceraser", "https://www.magiceraser.io/"],
+    link: ["Magiceraser", "https://www.magiceraser.io/"],
   },
   {
     id: 19,
     title: "Image Enlarger & Enhancer",
     description:
       "All-in-one AI toolkits help you enhance and upscale images. Increases image resolution without losing quality.",
-    link: ["imglarger", "https://imglarger.com/"],
+    link: ["Imglarger", "https://imglarger.com/"],
   },
   {
     id: 20,
     title: "Free Online Video, Audio, Image Tools",
     description:
       "The all-in-one solution helps everyone edit, convert, compress and share media files on the go.Just upload the file, make changes  and download",
-    link: ["media.io", "https://www.media.io/"],
+    link: ["Media.io", "https://www.media.io/"],
   },
   {
     id: 21,
@@ -166,13 +166,7 @@ const alltips = [
       "Zoro is a Free anime streaming website which you can watch English Subbed and Dubbed Anime online with No Account and Daily update. WATCH NOW!",
     link: ["Zoro", "https://zoro.to/"],
   },
-  {
-    id: 22,
-    title: "Free movies and webseries",
-    description:
-      "FlixTor has over thousands movies and tv series online for free. Just find a film or show you enjoy watching and start enjoying it as much as you want! No sign up required – just go there, pick what you like to watch and press play.",
-    link: ["flixtor", "https://flixtor.video/home"],
-  },
+
   // {
   //   id: 23,
   //   title: "",
