@@ -31,14 +31,14 @@ const App = () => {
       {isFirst && <About />}
       {!isFirst && currentIndex < alltips.length && <Tip {...currentTip} />}
       {currentIndex < alltips.length ? (
-        <div className=" text-center  fixed_button">
+        <div className="fixed_button d-flex justify-content-between">
           {currentIndex > 0 && (
-            <button className="btn btn-secondary btn-lg" onClick={prev}>
+            <button className="btn btn-secondary btn-lg m-1" onClick={prev}>
               Previous
             </button>
           )}
-          <button className="btn btn-secondary btn-lg" onClick={next}>
-            Next
+          <button className="btn btn-secondary btn-lg m-1" onClick={next}>
+            &nbsp;&nbsp;Next&nbsp;&nbsp;
           </button>
         </div>
       ) : (
