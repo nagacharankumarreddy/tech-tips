@@ -12,7 +12,6 @@ const App = () => {
   const [currentTip, setCurrentTip] = useState({});
   const [index, setIndex] = useState(-1);
   const [alltips, setAlltips] = useState(null);
-  const [noOfTips, setNoOfTips] = useState(null);
   useEffect(() => {
     fetch("https://tech-tips-dc902-default-rtdb.firebaseio.com/tips.json")
       .then((res) => res.json())
@@ -44,8 +43,6 @@ const App = () => {
       setIsLast(true);
       console.log("last tip");
     }
-
-    console.log({ index, currentTip });
   };
 
   return (
