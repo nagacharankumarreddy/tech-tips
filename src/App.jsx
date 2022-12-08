@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import alltips from "./alltips";
 import { About } from "./About";
 import "./App.css";
 import { Tip } from "./Tip";
@@ -12,7 +11,6 @@ const App = () => {
   const [currentTip, setCurrentTip] = useState({});
   const [index, setIndex] = useState(-1);
   const [alltips, setAlltips] = useState(null);
-  const [noOfTips, setNoOfTips] = useState(null);
   useEffect(() => {
     fetch("https://tech-tips-dc902-default-rtdb.firebaseio.com/tips.json")
       .then((res) => res.json())
@@ -32,8 +30,6 @@ const App = () => {
     } else {
       $(".prev").attr("disabled", "disabled");
     }
-
-    console.log({ index, currentTip });
   };
   const next = () => {
     setIsFirst(false);
@@ -44,8 +40,6 @@ const App = () => {
       setIsLast(true);
       console.log("last tip");
     }
-
-    console.log({ index, currentTip });
   };
 
   return (
