@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Thankyou.css";
-function Thankyou() {
+function Thankyou({ user }) {
   return (
     <>
       <div className="thankyoucontent">
@@ -11,7 +11,7 @@ function Thankyou() {
               alt="thank-you-envelope"
               border="0"
             />
-            <h1>Thank you!</h1>
+            <h1>Thank you! {user}</h1>
             <p>
               Thanks a bunch for sharing the tip. It means a lot to me. <br />I
               really appreciate you giving us a moment of your time.
