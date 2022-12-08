@@ -21,8 +21,12 @@ export const Tip = ({
               })}
           </ol>
           {link[0] !== "" && (
-            <div className="text-center">
-              <a href={link[1]} className="btn btn-secondary ">
+            <div className="text-center text-dark">
+              <a
+                href={link[1]}
+                className=" btn btn-secondary  m-1"
+                style={{ color: "white" }}
+              >
                 {link[0]}
               </a>
             </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import alltips from "./alltips";
 import { About } from "./About";
 import "./App.css";
 import { Tip } from "./Tip";
@@ -31,8 +30,6 @@ const App = () => {
     } else {
       $(".prev").attr("disabled", "disabled");
     }
-
-    console.log({ index, currentTip });
   };
   const next = () => {
     setIsFirst(false);
