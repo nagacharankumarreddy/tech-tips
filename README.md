@@ -13,7 +13,7 @@ Once you have Node.js and npm installed, you can use the following steps to run 
 Navigate to the root directory of your cloned app in your terminal or command prompt.
 Run the following command to install the dependencies for your app:
 
-### npm install
+### `npm install`
 
 Once the dependencies are installed, you can run the app with the following command:
 
