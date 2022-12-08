@@ -3,54 +3,74 @@ import alltips from "./alltips";
 import { About } from "./About";
 import "./App.css";
 import { Tip } from "./Tip";
+import End from "./End";
+import $ from "jquery";
 
 const App = () => {
-  const [toBe, setToBe] = useState(alltips); //[{},{}]
-  let randomList = toBe;
   const [isFirst, setIsFirst] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(-1);
-  const [currentTip, setCurrentTip] = useState(null);
+  const [isLast, setIsLast] = useState(false);
+  const [currentTip, setCurrentTip] = useState({});
+  const [index, setIndex] = useState(-1);
+  const [alltips, setAlltips] = useState(null);
+  const [noOfTips, setNoOfTips] = useState(null);
+  useEffect(() => {
+    fetch("https://tech-tips-dc902-default-rtdb.firebaseio.com/tips.json")
+      .then((res) => res.json())
+      .then((data) => {
+        data.sort(() => Math.random() - 0.5);
+        setAlltips(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (alltips) setCurrentTip(alltips[index]);
+  }, [index]);
   const prev = () => {
-    setIsFirst(false);
-    setCurrentIndex(currentIndex - 1);
+    if (index > 0) {
+      setIndex((index) => index - 1);
+      $(".prev").removeAttr("disabled");
+    } else {
+      $(".prev").attr("disabled", "disabled");
+    }
+
+    console.log({ index, currentTip });
   };
   const next = () => {
-    if (isFirst) setCurrentIndex(0);
     setIsFirst(false);
-    setCurrentIndex(currentIndex + 1);
+    if (index < alltips.length - 1) {
+      setIndex((index) => index + 1);
+      $(".prev").removeAttr("disabled");
+    } else {
+      setIsLast(true);
+      console.log("last tip");
+    }
+
+    console.log({ index, currentTip });
   };
-  useEffect(() => {
-    setCurrentTip(randomList[currentIndex]);
-  }, [currentIndex]);
+
   return (
     <div>
       {isFirst && <About />}
-      {!isFirst && currentIndex < alltips.length && <Tip {...currentTip} />}
-      {currentIndex < alltips.length ? (
-        <div className="fixed_button d-flex justify-content-between">
-          {currentIndex > 0 && (
-            <button className="btn btn-secondary btn-lg m-1" onClick={prev}>
+      {!isLast ? (
+        <div>
+          {alltips && <Tip {...currentTip} />}
+          <div className="fixed_button d-flex justify-content-between">
+            <button
+              className="btn btn-secondary btn-lg m-1 prev"
+              onClick={prev}
+            >
               Previous
             </button>
-          )}
-          <button className="btn btn-secondary btn-lg m-1" onClick={next}>
-            &nbsp;&nbsp;Next&nbsp;&nbsp;
-          </button>
-        </div>
-      ) : (
-        <div className="col-md-12 text-center end">
-          <div className="d-flex  justify-content-center">
-            <div className=" text-center  my-5">
-              <marquee behavior="scroll" direction="left">
-                <h1>You have completed all tips</h1>
-              </marquee>
-              <h2>Happy Learning</h2>
-              <marquee behavior="scroll" direction="right">
-                <h3>Bye Bye</h3>
-              </marquee>
-            </div>
+            <button
+              className="btn btn-secondary btn-lg m-1 next"
+              onClick={next}
+            >
+              &nbsp;&nbsp;Next&nbsp;&nbsp;
+            </button>
           </div>
         </div>
+      ) : (
+        <End />
       )}
     </div>
   );

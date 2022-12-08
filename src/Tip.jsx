@@ -16,8 +16,8 @@ export const Tip = ({
           <p className="card-text">{description}</p>
           <ol>
             {list &&
-              list.map((item) => {
-                return <li>{item}</li>;
+              list.map((item, id) => {
+                return <li key={id}>{item}</li>;
               })}
           </ol>
           {link[0] !== "" && (

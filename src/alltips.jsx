@@ -166,20 +166,5 @@ const alltips = [
       "Zoro is a Free anime streaming website which you can watch English Subbed and Dubbed Anime online with No Account and Daily update. WATCH NOW!",
     link: ["Zoro", "https://zoro.to/"],
   },
-
-  // {
-  //   id: 23,
-  //   title: "",
-  //   description: "",
-  //   link: ["", ""],
-  // },
-  // {
-  //   id: 24,
-  //   title:"",
-  //   description:"",
-
-  //   link: ["", ""],
-  // },
 ];
-alltips.sort(() => Math.random() - 0.5);
 export default alltips;
