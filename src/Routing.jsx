@@ -6,7 +6,7 @@ export default function Routing() {
   return (
     <BrowserRouter>
       <Route path="/tech-tips" component={App} />
-      <Route path="/form" component={Form} />
+      <Route path="/tech-tips/form" component={Form} />
     </BrowserRouter>
   );
 }
