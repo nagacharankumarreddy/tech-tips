@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tech-tips/static/css/main.1deb5311.css",
-    "main.js": "/tech-tips/static/js/main.2b21342e.js",
+    "main.css": "/tech-tips/static/css/main.9683e429.css",
+    "main.js": "/tech-tips/static/js/main.b909d602.js",
     "static/js/787.e9c0eced.chunk.js": "/tech-tips/static/js/787.e9c0eced.chunk.js",
     "static/media/bg3.jpg": "/tech-tips/static/media/bg3.c5076066800f8cbe2956.jpg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/tech-tips/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -11,12 +11,12 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/tech-tips/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/Abstract Paper.svg": "/tech-tips/static/media/Abstract Paper.7b6d0bdc607d1b9df221.svg",
     "index.html": "/tech-tips/index.html",
-    "main.1deb5311.css.map": "/tech-tips/static/css/main.1deb5311.css.map",
-    "main.2b21342e.js.map": "/tech-tips/static/js/main.2b21342e.js.map",
+    "main.9683e429.css.map": "/tech-tips/static/css/main.9683e429.css.map",
+    "main.b909d602.js.map": "/tech-tips/static/js/main.b909d602.js.map",
     "787.e9c0eced.chunk.js.map": "/tech-tips/static/js/787.e9c0eced.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1deb5311.css",
-    "static/js/main.2b21342e.js"
+    "static/css/main.9683e429.css",
+    "static/js/main.b909d602.js"
   ]
 }
