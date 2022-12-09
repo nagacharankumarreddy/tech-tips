@@ -49,11 +49,8 @@ const App = () => {
       {!isLast ? (
         <div>
           <Link to="/tech-tips/form">
-            <button
-              className="btn btn-warning mt-2 float-right"
-              style={{ float: "right" }}
-            >
-              Share your Tip Here
+            <button className="btn btn-success mt-2" style={{ float: "right" }}>
+              Share your Tip
             </button>
           </Link>
           {alltips && <Tip {...currentTip} />}
