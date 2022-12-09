@@ -16,7 +16,7 @@ const App = () => {
     fetch("https://tech-tips-dc902-default-rtdb.firebaseio.com/tips.json")
       .then((res) => res.json())
       .then((data) => {
-        data.sort(() => Math.random() - 0.5);
+        // data.sort(() => Math.random() - 0.5);
         setAlltips(data);
       });
   }, []);

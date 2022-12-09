@@ -42,7 +42,7 @@ function Form() {
                 type="name"
                 className="form-control"
                 id="name"
-                placeholder="Name"
+                placeholder="Your name, please?"
                 required
               />
             </div>

@@ -12,7 +12,11 @@ export const Tip = ({
       <h1 className="text-center text-warning">Tech Tips</h1>
       <div className="card mt-3 text-bg-dark" style={{ width: "100%" }}>
         <div className="card-body">
-          {title !== "" && <h4 className="card-title">{title}</h4>}
+          {title !== "" && (
+            <h4 className="card-title">
+              {id + 1}. {title}
+            </h4>
+          )}
           <p className="card-text">{description}</p>
           <ol>
             {list &&

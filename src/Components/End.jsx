@@ -9,8 +9,10 @@ function End() {
         <h2>Happy Learning</h2>
         <h3>Bye Bye &#x1F44B;</h3>
         <marquee behavior="scroll" direction="right">
-          If you have any tips that you'd like to share, I would be happy to
-          hear them &#128521;
+          <h5 className="text-light">
+            If you have any tips that you'd like to share, I would be happy to
+            hear them &#128521;
+          </h5>
         </marquee>
 
         <Link to="/tech-tips/form">
