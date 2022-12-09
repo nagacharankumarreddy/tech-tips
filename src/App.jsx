@@ -3,6 +3,7 @@ import { About } from "./About";
 import "./App.css";
 import { Tip } from "./Tip";
 import End from "./End";
+import { Link } from "react-router-dom";
 import $ from "jquery";
 
 const App = () => {
@@ -47,6 +48,14 @@ const App = () => {
       {isFirst && <About />}
       {!isLast ? (
         <div>
+          <Link to="/tech-tips/form">
+            <button
+              className="btn btn-warning mt-2 float-right"
+              style={{ float: "right" }}
+            >
+              Share your Tip Here
+            </button>
+          </Link>
           {alltips && <Tip {...currentTip} />}
           <div className="fixed_button d-flex justify-content-between">
             <button

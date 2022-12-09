@@ -6,6 +6,8 @@ Overall, providing technology tips is a rewarding experience for me, and I am co
 
 ## If you have any tips that you'd like to share, I would be happy to hear them :blush:
 
+## Now this is live at `https://nagacharankumarreddy.github.io/tech-tips`
+
 # How to run this application
 
 Once you have Node.js and npm installed, you can use the following steps to run this React app:
