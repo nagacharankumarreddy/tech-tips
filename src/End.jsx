@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function End() {
   return (
     <div className="d-flex  justify-content-center">
@@ -12,11 +13,11 @@ function End() {
           hear them &#128521;
         </marquee>
 
-        <a href="/form">
+        <Link to="/form">
           <button className="btn btn-outline-primary mt-5">
             Share your Tip Here
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );

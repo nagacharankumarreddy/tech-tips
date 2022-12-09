@@ -17,7 +17,7 @@ function Thankyou({ user }) {
               really appreciate you giving us a moment of your time.
             </p>
             <button className="go-home">
-              <a href="/tech-tips">Home</a>
+              <Link to="/tech-tips">Home</Link>
             </button>
           </div>
         </div>
