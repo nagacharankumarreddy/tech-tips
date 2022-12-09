@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Thankyou.css";
+import "../Styles/ThankYou.css";
 function Thankyou({ user }) {
   return (
     <>

@@ -1,6 +1,6 @@
 import $ from "jquery";
 import { useState } from "react";
-import Thankyou from "./ThankYou";
+import Thankyou from "../Components/ThankYou";
 function Form() {
   const [thanks, saythanks] = useState(false);
   const [user, setUser] = useState("");

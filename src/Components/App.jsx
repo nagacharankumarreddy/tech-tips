@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { About } from "./About";
-import "./App.css";
-import { Tip } from "./Tip";
-import End from "./End";
+import { About } from "../Components/About";
+import "../Styles/App.css";
+import { Tip } from "../Components/Tip";
+import End from "../Components/End";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 
