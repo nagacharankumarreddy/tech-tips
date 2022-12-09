@@ -12,7 +12,7 @@ function End() {
           hear them &#128521;
         </marquee>
 
-        <a href="/tech-tips/form">
+        <a href="/form">
           <button className="btn btn-outline-primary mt-5">
             Share your Tip Here
           </button>
