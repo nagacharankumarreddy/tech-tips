@@ -7,7 +7,7 @@ export default function Routing() {
     <BrowserRouter>
       <Routes>
         <Route path="/tech-tips" element={<App />}></Route>
-        <Route path="/form" element={<Form />} />
+        <Route path="/tech-tips/form" element={<Form />} />
       </Routes>
     </BrowserRouter>
   );
