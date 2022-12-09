@@ -5,8 +5,8 @@ import Form from "./Form";
 export default function Routing() {
   return (
     <BrowserRouter>
-      <Route path="/tech-tips" component={App} />
-      <Route path="/tech-tips/form" component={Form} />
+      <Route path="/tech-tips" exact component={App} />
+      <Route path="/tech-tips/form" exact component={Form} />
     </BrowserRouter>
   );
 }
