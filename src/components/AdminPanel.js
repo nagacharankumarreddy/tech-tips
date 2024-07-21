@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import { get, push, ref, remove, update } from "firebase/database";
 import { database } from "../firebase";
 import { toast } from "react-toastify";
+import Loader from "./Loader";
 
 const AdminPanel = () => {
   const [suggestedTips, setSuggestedTips] = useState([]);
   const [editingTip, setEditingTip] = useState(null);
   const [editedTip, setEditedTip] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchSuggestedTips = async () => {
       try {
+        setLoading(true);
         const snapshot = await get(ref(database, "suggestedTips"));
         const data = snapshot.val();
         const tipsArray = data
@@ -22,6 +25,8 @@ const AdminPanel = () => {
           position: "top-right",
           autoClose: 5000,
         });
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -30,6 +35,7 @@ const AdminPanel = () => {
 
   const handleApprove = async (tip) => {
     try {
+      setLoading(true);
       await push(ref(database, "tips"), {
         title: tip.title,
         description: tip.description,
@@ -46,6 +52,8 @@ const AdminPanel = () => {
         position: "top-right",
         autoClose: 5000,
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -57,6 +65,7 @@ const AdminPanel = () => {
   const handleSave = async () => {
     if (editedTip) {
       try {
+        setLoading(true);
         await update(
           ref(database, `suggestedTips/${editingTip.id}`),
           editedTip
@@ -74,11 +83,15 @@ const AdminPanel = () => {
           position: "top-right",
           autoClose: 5000,
         });
+      } finally {
+        setLoading(false);
       }
     }
   };
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Admin Panel</h1>
       <div className="bg-white shadow-md rounded p-4">

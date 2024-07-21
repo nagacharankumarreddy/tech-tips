@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { fetchTips } from "../api";
+import Loader from "./Loader";
 
 const TipsList = () => {
   const [tips, setTips] = useState([]);
   const [currentTipIndex, setCurrentTipIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetchTips((fetchedTips) => {
       setTips(fetchedTips);
       if (fetchedTips.length === 0) {
         setCurrentTipIndex(0);
       }
+      setLoading(false);
     });
   }, []);
 
@@ -30,7 +34,9 @@ const TipsList = () => {
 
   return (
     <div className="p-4 md:p-6 lg:p-8 relative">
-      {tips.length === 0 ? (
+      {loading ? (
+        <Loader />
+      ) : tips.length === 0 ? (
         <p className="text-center text-lg font-medium">No tips available.</p>
       ) : (
         <div className="bg-white shadow-md rounded-lg p-4 md:p-6 lg:p-8 max-w-md mx-auto">
@@ -48,14 +54,14 @@ const TipsList = () => {
             <button
               onClick={handlePrevious}
               disabled={currentTipIndex === 0}
-              className="bg-gray-500 text-white px-4 py-2 rounded shadow-md disabled:opacity-50 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="bg-emerald-600 text-white px-4 py-2 rounded shadow-md disabled:opacity-50 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400"
             >
               Previous
             </button>
             <button
               onClick={handleNext}
               disabled={currentTipIndex === tips.length - 1}
-              className="bg-blue-500 text-white px-4 py-2 rounded shadow-md disabled:opacity-50 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="bg-emerald-600 text-white px-4 py-2 rounded shadow-md disabled:opacity-50 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400"
             >
               Next
             </button>
