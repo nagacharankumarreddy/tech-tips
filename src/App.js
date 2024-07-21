@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +10,20 @@ import TipsList from "./components/TipsList";
 import SuggestTip from "./components/SuggestTip";
 import AdminPanel from "./components/AdminPanel";
 import Login from "./components/Login";
+import { auth } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const adminEmail = "nagacharankumarreddy@gmail.com";
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,7 +35,7 @@ const App = () => {
     }
   };
 
-  const isAuthenticated = sessionStorage.getItem("isAuthenticated") === "true";
+  const isAuthenticated = user && user.email === adminEmail;
 
   return (
     <Router>
@@ -62,9 +73,7 @@ const App = () => {
             >
               <Link
                 to="/admin"
-                className={`block text-lg font-medium hover:text-gray-300 ${
-                  isAuthenticated ? "" : " opacity-50"
-                }`}
+                className={`block text-lg font-medium hover:text-gray-300 `}
                 onClick={handleLinkClick}
               >
                 Admin
