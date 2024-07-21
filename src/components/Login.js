@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault();
     if (password === adminPassword) {
       sessionStorage.setItem("isAuthenticated", "true");
-      navigate("/admin-panel");
+      navigate("/admin");
     } else {
       alert("Incorrect password");
     }
