@@ -57,6 +57,25 @@ const AdminPanel = () => {
     }
   };
 
+  const handleDelete = async (tip) => {
+    try {
+      setLoading(true);
+      await remove(ref(database, `suggestedTips/${tip.id}`));
+      toast.success("Tip Deleted!", {
+        position: "top-right",
+        autoClose: 5000,
+      });
+      setSuggestedTips((prevTips) => prevTips.filter((t) => t.id !== tip.id));
+    } catch (error) {
+      toast.error("Error deleting tip", {
+        position: "top-right",
+        autoClose: 5000,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleEdit = (tip) => {
     setEditingTip(tip);
     setEditedTip({ ...tip });
@@ -115,6 +134,12 @@ const AdminPanel = () => {
                   className="bg-green-500 text-white px-4 py-2 rounded mr-2"
                 >
                   Approve
+                </button>
+                <button
+                  onClick={() => handleDelete(tip)}
+                  className="bg-green-500 text-white px-4 py-2 rounded mr-2"
+                >
+                  Delete
                 </button>
                 <button
                   onClick={() => handleEdit(tip)}
