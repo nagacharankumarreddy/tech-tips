@@ -1,4 +1,4 @@
-import { ref, push, set, get, child } from "firebase/database";
+import { ref, push, set, get } from "firebase/database";
 import { database } from "./firebase";
 
 export const suggestTip = async (tip) => {
