@@ -156,7 +156,7 @@ const AdminPanel = () => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="p-4">
+    <div className="p-4 m-10">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-xl font-bold">Admin Panel</h1>
         <button
