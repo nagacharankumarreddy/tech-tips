@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
 import { get, push, ref, remove, update } from "firebase/database";
-import { database } from "../firebase";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { database } from "../firebase";
 import Loader from "./Loader";
 
 const AdminPanel = () => {

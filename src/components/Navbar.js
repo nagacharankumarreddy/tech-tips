@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({
   isAuthenticated,
@@ -20,7 +20,7 @@ const Navbar = ({
   }, [location.pathname, isAuthenticated, setShowLogoutButton]);
 
   return (
-    <nav className="bg-gray-800 text-white p-4 shadow-md">
+    <nav className="bg-gray-800 text-white p-4 shadow-md fixed w-full top-0 left-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         <Link
           to="/tech-tips"

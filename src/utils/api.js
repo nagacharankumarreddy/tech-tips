@@ -1,40 +1,20 @@
-import { get, push, ref, set } from "firebase/database";
+import { get, ref, remove } from "firebase/database";
+import { toast } from "react-toastify";
 import { database } from "../firebase";
 
-export const suggestTip = async (tip) => {
+export const deleteTip = async (id) => {
   try {
-    const tipsRef = ref(database, "suggestedTips");
-    await push(tipsRef, tip);
+    await remove(ref(database, `tips/${id}`));
+    toast.success("Tip Deleted!", {
+      position: "top-right",
+      autoClose: 5000,
+    });
   } catch (error) {
-    console.error("Error suggesting tip:", error);
-    throw new Error("Failed to suggest tip");
-  }
-};
-
-export const fetchSuggestedTips = async () => {
-  try {
-    const tipsRef = ref(database, "suggestedTips");
-    const snapshot = await get(tipsRef);
-    if (snapshot.exists()) {
-      return snapshot.val();
-    } else {
-      return [];
-    }
-  } catch (error) {
-    console.error("Error fetching suggested tips:", error);
-    throw new Error("Failed to fetch suggested tips");
-  }
-};
-
-export const approveTip = async (id, tip) => {
-  try {
-    const tipsRef = ref(database, `tips/${id}`);
-    await set(tipsRef, tip);
-    const suggestedRef = ref(database, `suggestedTips/${id}`);
-    await set(suggestedRef, null);
-  } catch (error) {
-    console.error("Error approving tip:", error);
-    throw new Error("Failed to approve tip");
+    toast.error("Error deleting tip", {
+      position: "top-right",
+      autoClose: 5000,
+    });
+    throw error;
   }
 };
 
