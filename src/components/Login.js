@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { toast } from "react-toastify";
+import { ADMIN_MAIL } from "../constants";
 
 const Login = () => {
   const navigate = useNavigate();
-  const adminEmail = "nagacharankumarreddy@gmail.com";
 
   const handleLogin = async () => {
     try {
@@ -14,14 +14,14 @@ const Login = () => {
       const user = result.user;
       console.log("User:", user);
 
-      if (user.email === adminEmail) {
+      if (user.email === ADMIN_MAIL) {
         toast.success("🎉 You are the admin! 👑", {
           position: "top-right",
           autoClose: 5000,
         });
         setTimeout(() => {
           navigate("/admin");
-        }, 2000);
+        }, 1500);
       } else {
         toast.info("🚫 Dude, you are not admin! 😔", {
           position: "top-right",

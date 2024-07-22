@@ -113,6 +113,7 @@ const AdminPanel = () => {
   ) : (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Admin Panel</h1>
+
       <div className="bg-white shadow-md rounded p-4">
         <h2 className="text-lg font-semibold mb-2">Suggested Tips</h2>
         {suggestedTips.length ? (
@@ -137,7 +138,7 @@ const AdminPanel = () => {
                 </button>
                 <button
                   onClick={() => handleDelete(tip)}
-                  className="bg-green-500 text-white px-4 py-2 rounded mr-2"
+                  className="bg-red-500 text-white px-4 py-2 rounded mr-2"
                 >
                   Delete
                 </button>

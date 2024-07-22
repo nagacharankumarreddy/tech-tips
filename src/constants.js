@@ -6,3 +6,4 @@ export const firebaseConfig = {
   messagingSenderId: "293990550707",
   appId: "1:293990550707:web:8c2fad75b6e0a3f0f6b4c6",
 };
+export const ADMIN_MAIL = "nagacharankumarreddy@gmail.com";
