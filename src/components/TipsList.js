@@ -45,7 +45,6 @@ const TipsList = ({ user }) => {
     try {
       await deleteTip(tipId);
       setTips(tips.filter((tip) => tip.id !== tipId));
-      setCurrentTipIndex(0);
     } catch (error) {
       console.error("Error deleting tip:", error);
     }
@@ -58,8 +57,19 @@ const TipsList = ({ user }) => {
 
   const handleEditChange = (e) => {
     const { name, value } = e.target;
-    setEditedTip({ ...editedTip, [name]: value });
+  
+    if (name.startsWith('link')) {
+      const index = parseInt(name.replace('link', ''), 10);
+      const newLinks = [...editedTip.link];
+      newLinks[index] = value;
+      setEditedTip({ ...editedTip, link: newLinks });
+    } else {
+      setEditedTip({ ...editedTip, [name]: value });
+    }
   };
+  
+  
+  
 
   const handleEditSubmit = async (e) => {
     e.preventDefault();
@@ -106,58 +116,56 @@ const TipsList = ({ user }) => {
             </>
           )}
           {isEditing ? (
-            <form
-              onSubmit={handleEditSubmit}
-              className="flex flex-col space-y-4"
-            >
-              <input
-                type="text"
-                name="title"
-                value={editedTip.title}
-                onChange={handleEditChange}
-                className="p-2 border border-gray-300 rounded"
-                placeholder="Title"
-              />
-              <textarea
-                name="description"
-                value={editedTip.description}
-                onChange={handleEditChange}
-                className="p-2 border border-gray-300 rounded"
-                placeholder="Description"
-                rows="4"
-              />
-              <input
-                type="text"
-                name="link[0]"
-                value={editedTip.link[0]}
-                onChange={handleEditChange}
-                className="p-2 border border-gray-300 rounded"
-                placeholder="Link Text"
-              />
-              <input
-                type="url"
-                name="link[1]"
-                value={editedTip.link[1]}
-                onChange={handleEditChange}
-                className="p-2 border border-gray-300 rounded"
-                placeholder="Link URL"
-              />
-              <div className="flex justify-between">
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                >
-                  Save
-                </button>
-                <button
-                  type="button"
-                  onClick={handleCancelEdit}
-                  className="bg-gray-500 text-white px-4 py-2 rounded shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
+            <form onSubmit={handleEditSubmit} className="flex flex-col space-y-4">
+            <input
+              type="text"
+              name="title"
+              value={editedTip.title}
+              onChange={handleEditChange}
+              className="p-2 border border-gray-300 rounded"
+              placeholder="Title"
+            />
+            <textarea
+              name="description"
+              value={editedTip.description}
+              onChange={handleEditChange}
+              className="p-2 border border-gray-300 rounded"
+              placeholder="Description"
+              rows="4"
+            />
+            <input
+              type="text"
+              name="link0" // Name for link text
+              value={editedTip.link[0]}
+              onChange={handleEditChange}
+              className="p-2 border border-gray-300 rounded"
+              placeholder="Link Text"
+            />
+            <input
+              type="url"
+              name="link1" // Name for link URL
+              value={editedTip.link[1]}
+              onChange={handleEditChange}
+              className="p-2 border border-gray-300 rounded"
+              placeholder="Link URL"
+            />
+            <div className="flex justify-between">
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                Save
+              </button>
+              <button
+                type="button"
+                onClick={handleCancelEdit}
+                className="bg-gray-500 text-white px-4 py-2 rounded shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+          
           ) : (
             <>
               <div className="h-64 overflow-y-auto mb-4">
