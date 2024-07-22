@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tech-tips/static/css/main.81e70977.css",
-    "main.js": "/tech-tips/static/js/main.458d2bde.js",
+    "main.js": "/tech-tips/static/js/main.0961227d.js",
     "index.html": "/tech-tips/index.html",
     "main.81e70977.css.map": "/tech-tips/static/css/main.81e70977.css.map",
-    "main.458d2bde.js.map": "/tech-tips/static/js/main.458d2bde.js.map"
+    "main.0961227d.js.map": "/tech-tips/static/js/main.0961227d.js.map"
   },
   "entrypoints": [
     "static/css/main.81e70977.css",
-    "static/js/main.458d2bde.js"
+    "static/js/main.0961227d.js"
   ]
 }
