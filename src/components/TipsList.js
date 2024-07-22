@@ -44,6 +44,12 @@ const TipsList = () => {
             <h2 className="text-2xl font-bold mb-2">{currentTip.title}</h2>
             <p className="text-gray-700">{currentTip.description}</p>
           </div>
+          <div className="text-xl text-right font-extrabold">
+            <p className="mt-4  text-gray-500 ">
+              Author -{" "}
+              {currentTip?.author ? currentTip.author.toUpperCase() : "ADMIN"}
+            </p>
+          </div>
           <div className="mt-4 flex justify-between items-center">
             <button
               onClick={handlePrevious}

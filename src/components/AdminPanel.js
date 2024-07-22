@@ -9,7 +9,7 @@ const AdminPanel = () => {
   const [editingTip, setEditingTip] = useState(null);
   const [editedTip, setEditedTip] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showBulkUpload, setShowBulkUpload] = useState(true);
+  const [showBulkUpload, setShowBulkUpload] = useState(false);
   const [file, setFile] = useState(null);
 
   useEffect(() => {
@@ -84,6 +84,7 @@ const AdminPanel = () => {
         title: tip.title,
         description: tip.description,
         link: tip.link,
+        author: tip.author,
       });
       await remove(ref(database, `suggestedTips/${tip.id}`));
       toast.success("Tip approved and added!", {
@@ -160,9 +161,9 @@ const AdminPanel = () => {
         <h1 className="text-xl font-bold">Admin Panel</h1>
         <button
           onClick={() => setShowBulkUpload(!showBulkUpload)}
-          className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="px-4 py-2 bg-blue-600 text-center text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          {showBulkUpload ? "Close Bulk Upload" : "Bulk Upload"}
+          {showBulkUpload ? "Close Upload" : "Bulk Upload"}
         </button>
       </div>
 
