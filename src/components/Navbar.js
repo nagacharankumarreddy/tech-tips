@@ -22,7 +22,10 @@ const Navbar = ({
   return (
     <nav className="bg-gray-800 text-white p-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="text-xl font-semibold hover:text-gray-300">
+        <Link
+          to="/tech-tips"
+          className="text-xl font-semibold hover:text-gray-300"
+        >
           Home
         </Link>
         <button

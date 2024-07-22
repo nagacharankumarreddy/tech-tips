@@ -11,7 +11,8 @@ const Routeslist = ({ user }) => {
 
   return (
     <Routes>
-      <Route path="/" element={<TipsList />} />
+      <Route path="/" element={<Navigate to="/tech-tips" />} />
+      <Route path="/tech-tips" element={<TipsList />} />
       <Route path="/suggest-tip" element={<SuggestTip />} />
       <Route
         path="/admin"
