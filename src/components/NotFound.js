@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
-  const [countdown, setCountdown] = useState(5);
+  const [countdown, setCountdown] = useState(3);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const NotFound = () => {
           Oops! The page you're looking for cannot be found.
         </p>
         <p className="text-sm text-gray-500 mb-4">
-          You will be redirected to the homepage in
+          You will be redirected to the homepage in{" "}
           <span id="countdown" className="font-bold">
             {countdown}
           </span>{" "}
