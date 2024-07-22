@@ -1,10 +1,10 @@
 import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import TipsList from "./TipsList";
-import SuggestTip from "./SuggestTip";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { ADMIN_MAIL } from "../utils/constants";
 import AdminPanel from "./AdminPanel";
 import Login from "./Login";
-import { ADMIN_MAIL } from "../constants";
+import SuggestTip from "./SuggestTip";
+import TipsList from "./TipsList";
 
 const Routeslist = ({ user }) => {
   const isAuthenticated = user && user.email === ADMIN_MAIL;

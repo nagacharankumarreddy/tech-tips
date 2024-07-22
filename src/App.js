@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "./firebase";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Routeslist from "./components/Routeslist";
-import { ADMIN_MAIL } from "./constants";
-import { useNavigate } from "react-router-dom";
+import { auth } from "./firebase";
+import { ADMIN_MAIL } from "./utils/constants";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

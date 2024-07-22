@@ -1,9 +1,9 @@
+import { signInWithPopup } from "firebase/auth";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, provider } from "../firebase";
-import { signInWithPopup } from "firebase/auth";
 import { toast } from "react-toastify";
-import { ADMIN_MAIL } from "../constants";
+import { auth, provider } from "../firebase";
+import { ADMIN_MAIL } from "../utils/constants";
 
 const Login = () => {
   const navigate = useNavigate();

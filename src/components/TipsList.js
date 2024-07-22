@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchTips } from "../api";
+import { fetchTips } from "../utils/api";
 import Loader from "./Loader";
 
 const TipsList = () => {
