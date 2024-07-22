@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tech-tips/static/css/main.65bbee30.css",
+    "main.js": "/tech-tips/static/js/main.553d18f7.js",
+    "index.html": "/tech-tips/index.html",
+    "main.65bbee30.css.map": "/tech-tips/static/css/main.65bbee30.css.map",
+    "main.553d18f7.js.map": "/tech-tips/static/js/main.553d18f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65bbee30.css",
+    "static/js/main.553d18f7.js"
+  ]
+}
